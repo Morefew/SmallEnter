@@ -13,16 +13,27 @@ import java.util.List;
 @Table(name = "cuentasporpagar")
 public class CuentasPorPagar implements Serializable {
     @Id
-    @Column(name = "id_cuentasporpagar", nullable = false, unique = true)
+    @Column(name = "cuentasporpagar_id", nullable = false, unique = true)
     private Long idCuentasPorPagar;
 
     @ManyToOne
     @JoinColumn(name = "suplidor_id_suplidor")
     private SuplidorEntity idSuplidor;
 
-    @ManyToMany
+    @OneToMany
     @JoinColumn(name = "factura_id_factura")
     private List<FacturaEntity> idFactura;
+
+    @Column(name = "subtotal")
+    private double subtotal;
+
+    @Column(name = "impuestos")
+    private double impuestos;
+
+    @Column(name = "total")
+    private Double total;
+
+
 
 
 }

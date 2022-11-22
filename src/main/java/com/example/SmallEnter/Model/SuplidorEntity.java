@@ -14,7 +14,7 @@ import java.io.Serializable;
 public class SuplidorEntity implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_suplidor", nullable = false, unique = true)
+    @Column(name = "suplidor_id", nullable = false, unique = true)
     private Long idSuplidor;
 
     @Column(name = "empresa_suplidor")
