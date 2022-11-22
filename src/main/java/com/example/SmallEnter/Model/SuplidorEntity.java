@@ -45,11 +45,11 @@ public class SuplidorEntity implements Serializable {
     private int credito;
 
     @OneToMany
-    @JoinColumn(name = "cuentas_por_pagar_suplidor")
+    @JoinColumn(name = "cuentas_por_pagar_id_cuentas_por_pagar")
     private List<FacturaEntity> cuentasPorPagarEntity;
 
     @OneToMany
-    @JoinColumn(name = "cuentas_por_cobrar_suplidor")
+    @JoinColumn(name = "cuentas_por_cobrar_id_cuentas_por_cobrar")
     private List<FacturaEntity> cuentasPorCobrarEntity;
 
     @Column(name = "status_suplidor")

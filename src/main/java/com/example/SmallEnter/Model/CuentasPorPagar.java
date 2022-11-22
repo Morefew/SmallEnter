@@ -4,23 +4,24 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.List;
 
 @Getter
 @Setter
 @Entity
 @Table(name = "cuentasporpagar")
-public class CuentasPorPagar {
+public class CuentasPorPagar implements Serializable {
     @Id
     @Column(name = "id_cuentasporpagar", nullable = false)
-    private Long idcuentasPorPagar;
+    private Long idCuentasPorPagar;
 
     @ManyToOne
-    @JoinColumn(name = "suplidor_cuentasporpagar")
+    @JoinColumn(name = "suplidor_id_suplidor")
     private SuplidorEntity idSuplidor;
 
     @ManyToMany
-    @JoinColumn(name = "factura_cuentasporpagar")
+    @JoinColumn(name = "factura_id_factura")
     private List<FacturaEntity> idFactura;
 
 

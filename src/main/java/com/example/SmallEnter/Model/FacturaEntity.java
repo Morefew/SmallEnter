@@ -4,13 +4,14 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Date;
 
 @Getter
 @Setter
 @Entity
 @Table(name = "factura")
-public class FacturaEntity {
+public class FacturaEntity implements Serializable {
     @Id
     @Column(name = "id_factura", nullable = false)
     private Long idFactura;
@@ -20,6 +21,8 @@ public class FacturaEntity {
 
     @Column(name = "NCF")
     private String ncf;
+
+    @JoinColumn(name = "persona_id_persona")
 
     @Column(name = "producto_1")
     private String productoUno;
@@ -141,6 +144,7 @@ public class FacturaEntity {
     @Column(name = "fecha_vencimiento")
     private Date fechaVencimiento;
 
+    // Si la factura no se salda en el momento pasas a cuentas por cobrar, de lo contrario pasa al histórico del cliente.
     @Column(name = "pagada")
     private boolean pagada;
 

@@ -24,7 +24,7 @@ public class PersonaEntity implements Serializable {
     private String apellido;
 
     @ManyToOne
-    @JoinColumn(name = "rol_persona")
+    @JoinColumn(name = "rol_id_rol")
     private RolEntity rolEntity;
 
     @Column(name = "usuario_persona")
