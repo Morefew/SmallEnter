@@ -13,7 +13,7 @@ import java.util.List;
 @Table(name = "cuentasporpagar")
 public class CuentasPorPagar implements Serializable {
     @Id
-    @Column(name = "id_cuentasporpagar", nullable = false)
+    @Column(name = "id_cuentasporpagar", nullable = false, unique = true)
     private Long idCuentasPorPagar;
 
     @ManyToOne

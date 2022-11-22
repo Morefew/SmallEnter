@@ -13,7 +13,7 @@ import java.util.Date;
 @Table(name = "factura")
 public class FacturaEntity implements Serializable {
     @Id
-    @Column(name = "id_factura", nullable = false)
+    @Column(name = "id_factura", nullable = false, unique = true)
     private Long idFactura;
 
     @Column(name = "numero_factura")
