@@ -41,8 +41,8 @@ public class SuplidorEntity implements Serializable {
     @Column(name = "fecha_de_registro_suplidor")
     private String fechaDeRegistro;
 
-    @Column(name = "credito")
-    private int credito;
+    @Column(name = "condiciones_de_pago")
+    private int condicionesDePago;
 
     @OneToMany
     @JoinColumn(name = "cuentas_por_pagar_id_cuentas_por_pagar")

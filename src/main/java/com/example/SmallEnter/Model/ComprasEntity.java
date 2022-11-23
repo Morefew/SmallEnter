@@ -9,13 +9,10 @@ import java.io.Serializable;
 @Getter
 @Setter
 @Entity
-@Table(name = "almacen")
-public class AlmacenEntity implements Serializable {
+@Table(name = "compras")
+public class ComprasEntity implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "almacen_id", nullable = false, unique = true)
-    private Long almacen_Id;
-
-
-
+    @Column(name = "compras_id", nullable = false, unique = true)
+    private Long compras_Id;
 }

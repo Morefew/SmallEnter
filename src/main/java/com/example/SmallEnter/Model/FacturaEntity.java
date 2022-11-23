@@ -13,6 +13,7 @@ import java.util.Date;
 @Table(name = "factura")
 public class FacturaEntity implements Serializable {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "factura_id", nullable = false, unique = true)
     private Long idFactura;
 
@@ -22,7 +23,9 @@ public class FacturaEntity implements Serializable {
     @Column(name = "NCF")
     private String ncf;
 
+    @ManyToOne
     @JoinColumn(name = "persona_id_persona")
+    private PersonaEntity personaEntity;
 
     @Column(name = "producto_uno")
     private String productoUno;
@@ -30,8 +33,8 @@ public class FacturaEntity implements Serializable {
     private double precioUnidadUno;
     @Column(name = "unidades_producto_uno")
     private int unidadesProductoUno;
-    @Column(name = "subtotal_producto_uno")
-    private double subtotalProductoUno;
+    @Column(name = "importe_producto_uno")
+    private double importeProductoUno;
 
     @Column(name = "producto_dos")
     private String productoDos;
@@ -39,8 +42,8 @@ public class FacturaEntity implements Serializable {
     private double precioUnidadDos;
     @Column(name = "unidades_producto_dos")
     private int unidadesProductoDos;
-    @Column(name = "subtotal_producto_dos")
-    private double subtotalProductoDos;
+    @Column(name = "importe_producto_dos")
+    private double importeProductoDos;
 
     @Column(name = "producto_tres")
     private String productoTres;
@@ -48,8 +51,8 @@ public class FacturaEntity implements Serializable {
     private double precioUnidadTres;
     @Column(name = "unidades_producto_tres")
     private int unidadesProductoTres;
-    @Column(name = "subtotal_producto_Tres")
-    private double subtotalProductoTres;
+    @Column(name = "importe_producto_Tres")
+    private double importeProductoTres;
 
     @Column(name = "producto_cuatro")
     private String productoCuatro;
@@ -57,8 +60,8 @@ public class FacturaEntity implements Serializable {
     private double precioUnidadCuatro;
     @Column(name = "unidades_producto_cuatro")
     private int unidadesProductoCuatro;
-    @Column(name = "subtotal_producto_cuatro")
-    private double subtotalProductoCuatro;
+    @Column(name = "importe_producto_cuatro")
+    private double importeProductoCuatro;
 
     @Column(name = "producto_cinco")
     private String productoCinco;
@@ -66,8 +69,8 @@ public class FacturaEntity implements Serializable {
     private double precioUnidadCinco;
     @Column(name = "unidades_producto_cinco")
     private int unidadesProductoCinco;
-    @Column(name = "subtotal_producto_cinco")
-    private double subtotalProductoCinco;
+    @Column(name = "importe_producto_cinco")
+    private double importeProductoCinco;
 
     @Column(name = "producto_seis")
     private String productoSeis;
@@ -75,8 +78,8 @@ public class FacturaEntity implements Serializable {
     private double precioUnidadSeis;
     @Column(name = "unidades_producto_seis")
     private int unidadesProductoSeis;
-    @Column(name = "subtotal_producto_seis")
-    private double subtotalProductoSeis;
+    @Column(name = "importe_producto_seis")
+    private double importeProductoSeis;
 
     @Column(name = "producto_siete")
     private String productoSiete;
@@ -84,8 +87,8 @@ public class FacturaEntity implements Serializable {
     private double precioUnidadSiete;
     @Column(name = "unidades_producto_siete")
     private int unidadesProductoSiete;
-    @Column(name = "subtotal_producto_siete")
-    private double subtotalProductoSiete;
+    @Column(name = "importe_producto_siete")
+    private double importeProductoSiete;
 
     @Column(name = "producto_ocho")
     private String productoOcho;
@@ -93,8 +96,8 @@ public class FacturaEntity implements Serializable {
     private double precioUnidadOcho;
     @Column(name = "unidades_producto_ocho")
     private int unidadesProductoOcho;
-    @Column(name = "subtotal_producto_ocho")
-    private double subtotalProductoOcho;
+    @Column(name = "importe_producto_ocho")
+    private double importeProductoOcho;
 
     @Column(name = "producto_nueve")
     private String productoNueve;
@@ -102,8 +105,8 @@ public class FacturaEntity implements Serializable {
     private double precioUnidadNueve;
     @Column(name = "unidades_producto_nueve")
     private int unidadesProductoNueve;
-    @Column(name = "subtotal_producto_nueve")
-    private double subtotalProductoNueve;
+    @Column(name = "importe_producto_nueve")
+    private double importeProductoNueve;
 
     @Column(name = "producto_diez")
     private String productoDiez;
@@ -111,8 +114,8 @@ public class FacturaEntity implements Serializable {
     private double precioUnidadDiez;
     @Column(name = "unidades_producto_diez")
     private int unidadesProductoDiez;
-    @Column(name = "subtotal_producto_Diez")
-    private double subtotalProductoDiez;
+    @Column(name = "importe_producto_Diez")
+    private double importeProductoDiez;
 
     @Column(name = "producto_once")
     private String productoOnce;
@@ -120,8 +123,8 @@ public class FacturaEntity implements Serializable {
     private double precioUnidadOnce;
     @Column(name = "unidades_producto_once")
     private int unidadesProductoOnce;
-    @Column(name = "subtotal_producto_once")
-    private double subtotalProductoOnce;
+    @Column(name = "importe_producto_once")
+    private double importeProductoOnce;
 
     @Column(name = "producto_doce")
     private String productoDoce;
@@ -129,8 +132,8 @@ public class FacturaEntity implements Serializable {
     private double precioUnidadDoce;
     @Column(name = "unidades_producto_doce")
     private int unidadesProductoDoce;
-    @Column(name = "subtotal_producto_doce")
-    private double subtotalProductoDoce;
+    @Column(name = "importe_producto_doce")
+    private double importeProductoDoce;
 
     @Column(name = "producto_trece")
     private String productoTrece;
@@ -138,8 +141,8 @@ public class FacturaEntity implements Serializable {
     private double precioUnidadTrece;
     @Column(name = "unidades_producto_trece")
     private int unidadesProductoTrece;
-    @Column(name = "subtotal_producto_trece")
-    private double subtotalProductoTrece;
+    @Column(name = "importe_producto_trece")
+    private double importeProductoTrece;
 
     @Column(name = "producto_catorce")
     private String productoCatorce;
@@ -147,8 +150,8 @@ public class FacturaEntity implements Serializable {
     private double precioUnidadCatorce;
     @Column(name = "unidades_producto_catorce")
     private int unidadesProductoCatorce;
-    @Column(name = "subtotal_producto_Catorce")
-    private double subtotalProductoCatorce;
+    @Column(name = "importe_producto_Catorce")
+    private double importeProductoCatorce;
 
     @Column(name = "producto_quince")
     private String productoQuince;
@@ -156,9 +159,14 @@ public class FacturaEntity implements Serializable {
     private double precioUnidadQuince;
     @Column(name = "unidades_producto_quince")
     private int unidadesProductoQuince;
-    @Column(name = "subtotal_producto_quince")
-    private double subtotalProductoQuince;
+    @Column(name = "importe_producto_quince")
+    private double importeProductoQuince;
 
+    @Column(name = "subtotal")
+    private double subtotal;
+
+    @Column(name = "descuento")
+    private double descuento;
 
     @Column(name = "impuestos")
     private double impuestos;

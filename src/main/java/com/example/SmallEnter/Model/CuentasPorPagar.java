@@ -33,7 +33,6 @@ public class CuentasPorPagar implements Serializable {
     @Column(name = "total")
     private Double total;
 
-
-
-
+    @Column(name = "status_CPP")
+    private boolean statusCuenta;
 }
