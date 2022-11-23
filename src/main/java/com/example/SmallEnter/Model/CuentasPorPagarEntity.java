@@ -11,7 +11,7 @@ import java.util.List;
 @Setter
 @Entity
 @Table(name = "cuentasporpagar")
-public class CuentasPorPagar implements Serializable {
+public class CuentasPorPagarEntity implements Serializable {
     @Id
     @Column(name = "cuentasporpagar_id", nullable = false, unique = true)
     private Long idCuentasPorPagar;
