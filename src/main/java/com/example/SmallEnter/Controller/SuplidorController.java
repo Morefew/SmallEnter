@@ -42,7 +42,7 @@ public class SuplidorController {
     @GetMapping("/suplidor/{status_suplidor}")
     @ResponseStatus(HttpStatus.OK)
     public Optional<SuplidorEntity> getByStatus(@PathVariable("status_suplidor") boolean statusSuplidor) {
-        return suplidorRepository.findByStatus(statusSuplidor);
+        return suplidorRepository.findByStatusSuplidor(statusSuplidor);
     }
 
     @PostMapping("/save")

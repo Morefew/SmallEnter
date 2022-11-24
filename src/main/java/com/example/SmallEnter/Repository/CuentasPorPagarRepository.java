@@ -8,12 +8,6 @@ import java.util.Date;
 import java.util.Optional;
 @Repository
 public interface CuentasPorPagarRepository extends CrudRepository<CuentasPorPagarEntity, Long> {
-    Optional<CuentasPorPagarEntity> findByNCF(String ncf);
-
     Optional<CuentasPorPagarEntity> findBySuplidorId(Long suplidorId);
-
-    Optional<CuentasPorPagarEntity> findByFechaCreada(Date fechaCreada);
-
-    Optional<CuentasPorPagarEntity> findByPagada(boolean pagada);
-    Optional<CuentasPorPagarEntity> findByStatus(boolean status);
+    Optional<CuentasPorPagarEntity> findByStatusCuenta(boolean statusCuenta);
 }

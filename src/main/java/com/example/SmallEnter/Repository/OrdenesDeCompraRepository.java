@@ -12,7 +12,7 @@ public interface OrdenesDeCompraRepository extends CrudRepository<OrdenesDeCompr
 
     Optional<OrdenesDeCompraEntity> findByFechaCreada(Date fechaCreada);
 
-    Optional<OrdenesDeCompraEntity> findBySuplidorId(Long suplidorId);
+//    Optional<OrdenesDeCompraEntity> findBySuplidorId(Long suplidorId);
 
     Optional<OrdenesDeCompraEntity> findByStatus(boolean status);
 }

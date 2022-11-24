@@ -8,9 +8,9 @@ import org.springframework.stereotype.Repository;
 import java.util.Optional;
 @Repository
 public interface PersonaRepository extends CrudRepository<PersonaEntity, Long> {
-//    @Override
-//    Optional<PersonaEntity> findById(Long personaId);
-//    Optional<PersonaEntity> findByNombre(String nombrePersona);
-//    Optional<PersonaEntity> findByApellido(String apellidoPersona);
+    @Override
+    Optional<PersonaEntity> findById(Long personaId);
+    Optional<PersonaEntity> findByNombre(String nombrePersona);
+    Optional<PersonaEntity> findByApellido(String apellidoPersona);
 //    Optional<PersonaEntity> findByRol(RolEntity rolEntity);
 }

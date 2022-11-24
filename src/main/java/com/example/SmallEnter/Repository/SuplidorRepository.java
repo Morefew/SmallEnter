@@ -12,5 +12,5 @@ public interface SuplidorRepository extends CrudRepository<SuplidorEntity, Long>
 
     Optional<SuplidorEntity> findByRegistroNacional(String registroNacional);
 
-    Optional<SuplidorEntity> findByStatus(boolean statusSuplidor);
+    Optional<SuplidorEntity> findByStatusSuplidor(boolean statusSuplidor);
 }

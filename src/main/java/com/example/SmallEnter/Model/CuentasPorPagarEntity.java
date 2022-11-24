@@ -33,6 +33,6 @@ public class CuentasPorPagarEntity implements Serializable {
     @Column(name = "total")
     private Double total;
 
-    @Column(name = "status_CPP")
+    @Column(name = "status")
     private boolean statusCuenta;
 }

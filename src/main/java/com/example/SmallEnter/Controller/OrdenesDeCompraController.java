@@ -25,21 +25,21 @@ public class OrdenesDeCompraController {
 
     @GetMapping("/get/{ordenes_de_compra_id}")
     @ResponseStatus(HttpStatus.OK)
-    public Optional<OrdenesDeCompraEntity> findByOrdenesDeCompraId(@PathVariable("ordenes_de_compra_id") Long cuentaId) {
-        return ordenesDeCompraRepository.findById(cuentaId);
+    public Optional<OrdenesDeCompraEntity> findByOrdenesDeCompraId(@PathVariable("ordenes_de_compra_id") Long ordenId) {
+        return ordenesDeCompraRepository.findById(ordenId);
     }
 
     @GetMapping("/get/{numero_de_orden}")
     @ResponseStatus(HttpStatus.OK)
-    public Optional<OrdenesDeCompraEntity> findByNCF(@PathVariable("numero_de_orden") String numeroOrden) {
+    public Optional<OrdenesDeCompraEntity> findByNumeroDeOrden(@PathVariable("numero_de_orden") String numeroOrden) {
         return ordenesDeCompraRepository.findByNumeroOrden(numeroOrden);
     }
 
-    @GetMapping("/get/{suplidor_id}")
-    @ResponseStatus(HttpStatus.OK)
-    public Optional<OrdenesDeCompraEntity> findBySuplidorId(@PathVariable("suplidor_id") Long suplidorId) {
-        return ordenesDeCompraRepository.findBySuplidorId(suplidorId);
-    }
+//    @GetMapping("/get/{suplidor_id}")
+//    @ResponseStatus(HttpStatus.OK)
+//    public Optional<OrdenesDeCompraEntity> findBySuplidorId(@PathVariable("suplidor_id") Long suplidorId) {
+//        return ordenesDeCompraRepository.findBySuplidorId(suplidorId);
+//    }
     
     @GetMapping("/ordenesDeCompra/{fecha}")
     @ResponseStatus(HttpStatus.OK)

@@ -33,33 +33,16 @@ public class CuentasPorPagarController {
         return cuentasPorPagarRepository.findById(cuentaId);
     }
 
-    @GetMapping("/get/{NCF}")
-    @ResponseStatus(HttpStatus.OK)
-    public Optional<CuentasPorPagarEntity> findByNCF(@PathVariable("NCF") String ncf) {
-        return cuentasPorPagarRepository.findByNCF(ncf);
-    }
-
     @GetMapping("/get/{suplidor_id}")
     @ResponseStatus(HttpStatus.OK)
     public Optional<CuentasPorPagarEntity> findBySuplidorId(@PathVariable("suplidor_id") Long suplidorId) {
         return cuentasPorPagarRepository.findBySuplidorId(suplidorId);
     }
-    
-    @GetMapping("/cuentasPorPagar/{fecha}")
-    @ResponseStatus(HttpStatus.OK)
-    public Optional<CuentasPorPagarEntity> getByFecha(@PathVariable("fecha") Date fechaCreada) {
-        return cuentasPorPagarRepository.findByFechaCreada(fechaCreada);
-    }
 
-    @GetMapping("/cuentasPorPagar/{pagada}")
+    @GetMapping("/cuentasPorPagar/{status_cuenta}")
     @ResponseStatus(HttpStatus.OK)
-    public Optional<CuentasPorPagarEntity> getByPersonaId(@PathVariable("pagada") boolean pagadaId) {
-        return cuentasPorPagarRepository.findByPagada(pagadaId);
-    }
-    @GetMapping("/cuentasPorPagar/{status}")
-    @ResponseStatus(HttpStatus.OK)
-    public Optional<CuentasPorPagarEntity> getByStatus(@PathVariable("status") boolean status) {
-        return cuentasPorPagarRepository.findByStatus(status);
+    public Optional<CuentasPorPagarEntity> getByStatus(@PathVariable("status_cuenta") boolean statusCuenta) {
+        return cuentasPorPagarRepository.findByStatusCuenta(statusCuenta);
     }
     @PostMapping("/save")
     @ResponseStatus(HttpStatus.OK)

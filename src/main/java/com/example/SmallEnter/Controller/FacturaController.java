@@ -1,6 +1,7 @@
 package com.example.SmallEnter.Controller;
 
 import com.example.SmallEnter.Model.FacturaEntity;
+import com.example.SmallEnter.Model.PersonaEntity;
 import com.example.SmallEnter.Repository.FacturaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -23,10 +24,10 @@ public class FacturaController {
         return (List<FacturaEntity>) facturaRepository.findAll();
     }
 
-    @GetMapping("/factura/{NCF}")
+    @GetMapping("/factura/{numero_comprobante_fiscal}")
     @ResponseStatus(HttpStatus.OK)
-    public Optional<FacturaEntity> getByNCF(@PathVariable("NCF") String ncf){
-        return facturaRepository.findByNCF(ncf);
+    public Optional<FacturaEntity> getByNCF(@PathVariable("numero_comprobante_fiscal") String numerocomprobantefiscal){
+        return facturaRepository.findByNumeroComprobanteFiscal(numerocomprobantefiscal);
     }
 
     @GetMapping("/factura/{fecha}")
@@ -34,12 +35,12 @@ public class FacturaController {
     public Optional<FacturaEntity> getByFecha(@PathVariable("fecha") Date fechaCreada) {
         return facturaRepository.findByFechaCreada(fechaCreada);
     }
-
-    @GetMapping("/factura/{persona}")
-    @ResponseStatus(HttpStatus.OK)
-    public Optional<FacturaEntity> getByPersonaId(@PathVariable("persona") Long personaId) {
-        return facturaRepository.findByPersonaId(personaId);
-    }
+//
+//    @GetMapping("/factura/{persona}")
+//    @ResponseStatus(HttpStatus.OK)
+//    public Optional<FacturaEntity> getByPersonaId(@PathVariable("persona") Long personaId) {
+//        return facturaRepository.findByPersonaId(PersonaEntity);
+//    }
 
     @PostMapping("/save")
     @ResponseStatus(HttpStatus.OK)
