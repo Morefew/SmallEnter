@@ -56,7 +56,11 @@ public class CuentasPorPagarController {
     public Optional<CuentasPorPagarEntity> getByPersonaId(@PathVariable("pagada") boolean pagadaId) {
         return cuentasPorPagarRepository.findByPagada(pagadaId);
     }
-
+    @GetMapping("/cuentasPorPagar/{status}")
+    @ResponseStatus(HttpStatus.OK)
+    public Optional<CuentasPorPagarEntity> getByStatus(@PathVariable("status") boolean status) {
+        return cuentasPorPagarRepository.findByStatus(status);
+    }
     @PostMapping("/save")
     @ResponseStatus(HttpStatus.OK)
     public CuentasPorPagarEntity save(@RequestBody CuentasPorPagarEntity cuentasPorPagarEntity) {
