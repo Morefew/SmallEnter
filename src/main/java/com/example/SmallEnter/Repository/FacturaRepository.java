@@ -1,6 +1,5 @@
 package com.example.SmallEnter.Repository;
 
-import com.example.SmallEnter.Model.CuentasPorPagarEntity;
 import com.example.SmallEnter.Model.FacturaEntity;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;

@@ -1,7 +1,6 @@
 package com.example.SmallEnter.Repository;
 
 import com.example.SmallEnter.Model.ProductosEntity;
-import com.example.SmallEnter.Model.SuplidorEntity;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
