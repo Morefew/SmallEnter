@@ -8,12 +8,11 @@ import java.util.Date;
 import java.util.Optional;
 @Repository
 public interface OrdenesDeCompraRepository extends CrudRepository<OrdenesDeCompraEntity, Long> {
-//    Optional<OrdenesDeCompraEntity> findByNumeroOrden(String numeroOrden);
-//
-//    Optional<OrdenesDeCompraEntity> findByFechaCreada(Date fechaCreada);
-//
-//    Optional<OrdenesDeCompraEntity> findByIdSuplidor(Long suplidorId);
-//
-//    Optional<OrdenesDeCompraEntity> findByPagada(boolean pagada);
-//    Optional<OrdenesDeCompraEntity> findByStatus(boolean status);
+    Optional<OrdenesDeCompraEntity> findByNumeroOrden(String numeroOrden);
+
+    Optional<OrdenesDeCompraEntity> findByFechaCreada(Date fechaCreada);
+
+    Optional<OrdenesDeCompraEntity> findBySuplidorId(Long suplidorId);
+
+    Optional<OrdenesDeCompraEntity> findByStatus(boolean status);
 }

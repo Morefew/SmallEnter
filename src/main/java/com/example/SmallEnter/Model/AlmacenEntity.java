@@ -11,19 +11,8 @@ import java.io.Serializable;
 @Entity
 @Table(name = "almacen")
 public class AlmacenEntity implements Serializable {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "almacen_id", nullable = false, unique = true)
     private Long almacenId;
-
-    @Column(name = "nombre")
-    private String nombre;
-
-    @Column(name = "direccion")
-    private String direccion;
-
-    @Column(name = "estado")
-    private boolean estado;
-
 }

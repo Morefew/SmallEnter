@@ -1,12 +1,10 @@
 package com.example.SmallEnter.Model;
 
-
 import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.util.Date;
 import java.util.List;
 
 @Getter
@@ -14,7 +12,6 @@ import java.util.List;
 @Entity
 @Table(name = "suplidor")
 public class SuplidorEntity implements Serializable {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "suplidor_id", nullable = false, unique = true)
@@ -29,7 +26,7 @@ public class SuplidorEntity implements Serializable {
     @Column(name = "apellido_representante_suplidor")
     private String apellido;
 
-    @Column(name = "registroNacional")
+    @Column(name = "rnc_cedula_suplidor")
     private String registroNacional;
 
     @Column(name = "direccion_suplidor")
@@ -41,14 +38,20 @@ public class SuplidorEntity implements Serializable {
     @Column(name = "telefono_suplidor")
     private String telefono;
 
-    @Temporal(TemporalType.DATE)
-    @Column(name = "fecha")
-    private Date fecha;
+    @Column(name = "fecha_de_registro_suplidor")
+    private String fechaDeRegistro;
 
-    // dias de credito que se le da al suplidor
-    @Column(name = "dias_credito")
-    private int diasCredito;
+    @Column(name = "condiciones_de_pago")
+    private int condicionesDePago;
 
-    @Column(name = "status")
-    private boolean status;
+    @OneToMany
+    @JoinColumn(name = "cuentas_por_pagar_id_cuentas_por_pagar")
+    private List<FacturaEntity> cuentasPorPagarEntity;
+
+    @OneToMany
+    @JoinColumn(name = "cuentas_por_cobrar_id_cuentas_por_cobrar")
+    private List<FacturaEntity> cuentasPorCobrarEntity;
+
+    @Column(name = "status_suplidor")
+    private boolean statusSuplidor;
 }

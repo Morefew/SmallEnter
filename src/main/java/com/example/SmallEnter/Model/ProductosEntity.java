@@ -22,6 +22,15 @@ public class ProductosEntity implements Serializable {
     @Column(name = "nombre")
     private String nombre;
 
+    @Column(name = "marca")
+    private String marca;
+
+    @Column(name = "modelo")
+    private String modelo;
+
+    @Column(name = "version")
+    private String version;
+
     @Column(name = "descripcion")
     private String descripcion;
 

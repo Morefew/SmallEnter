@@ -27,7 +27,7 @@ public class PersonaEntity implements Serializable {
     private RolEntity rolEntity;
 
     @Column(name = "usuario_persona")
-    private String nombre_usuario;
+    private String nombreUsuario;
 
     @Column(name = "contrasena_persona")
     private String contrasena;
@@ -48,5 +48,5 @@ public class PersonaEntity implements Serializable {
     private String fechaDeRegistro;
 
     @Column(name = "status_persona")
-    private boolean persona_status;
+    private boolean personaStatus;
 }
