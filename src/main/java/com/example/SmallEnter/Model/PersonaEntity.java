@@ -14,7 +14,7 @@ public class PersonaEntity implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "persona_id", nullable = false, unique = true)
-    private Long idPersona;
+    private Long personaId;
 
     @Column(name = "nombre_persona")
     private String nombre;
@@ -40,6 +40,9 @@ public class PersonaEntity implements Serializable {
 
     @Column(name = "telefono_persona")
     private String telefono;
+
+    @Column(name = "tipo_precio")
+    private String tipoPrecio;
 
     @Column(name = "fecha_de_registro_persona")
     private String fechaDeRegistro;

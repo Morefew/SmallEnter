@@ -8,11 +8,11 @@ import java.util.Optional;
 @Repository
 public interface SuplidorRepository extends CrudRepository<SuplidorEntity, Long> {
 
-    Optional<SuplidorEntity> findByEmpresa(String empresa);
-
-    Optional<SuplidorEntity> findByRegistroNacional(String registroNacional);
-
-    Optional<SuplidorEntity> findByIdSuplidor(Long suplidorId);
-
-    Optional<SuplidorEntity> findByStatus(boolean statusSuplidor);
+//    Optional<SuplidorEntity> findByEmpresa(String empresa);
+//
+//    Optional<SuplidorEntity> findByRegistroNacional(String registroNacional);
+//
+//    Optional<SuplidorEntity> findByIdSuplidor(Long suplidorId);
+//
+//    Optional<SuplidorEntity> findByStatus(boolean statusSuplidor);
 }

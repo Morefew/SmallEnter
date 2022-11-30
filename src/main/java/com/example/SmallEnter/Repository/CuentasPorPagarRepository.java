@@ -7,9 +7,8 @@ import org.springframework.stereotype.Repository;
 import java.util.Optional;
 @Repository
 public interface CuentasPorPagarRepository extends CrudRepository<CuentasPorPagarEntity, Long> {
-    Optional<CuentasPorPagarEntity> findByNCF(String ncf);
+//    Optional<CuentasPorPagarEntity> findByNCF(String ncf);
+//    Optional<CuentasPorPagarEntity> findByNumeroOrden(String numeroOrden);
 
-    Optional<CuentasPorPagarEntity> findByNumeroOrden(String numeroOrden);
-
-    Optional<CuentasPorPagarEntity> findByIdSuplidor(Long suplidorId);
+//    Optional<CuentasPorPagarEntity> findByIdSuplidor(Long suplidorId);
 }

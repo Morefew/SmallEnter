@@ -8,10 +8,10 @@ import org.springframework.stereotype.Repository;
 import java.util.Optional;
 @Repository
 public interface FacturaRepository extends CrudRepository<FacturaEntity, Long> {
-    Optional<FacturaEntity> findByNCF(String ncf);
-
-    Optional<FacturaEntity> findByNumeroFactura(String numeroFactura);
-
-    Optional<FacturaEntity> findByPersonaId(Long personaId);
+//    Optional<FacturaEntity> findByNCF(String ncf);
+//
+//    Optional<FacturaEntity> findByNumeroFactura(String numeroFactura);
+//
+//    Optional<FacturaEntity> findByPersonaId(Long personaId);
 
 }

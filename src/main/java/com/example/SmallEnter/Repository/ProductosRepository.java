@@ -9,16 +9,16 @@ import java.util.Optional;
 @Repository
 public interface ProductosRepository extends CrudRepository<ProductosEntity, Long> {
 
-    Optional<ProductosEntity> findByProductoId (Long productoId);
-
-    Optional<ProductosEntity> findByDescripcion (String descripcion);
-
-    Optional<ProductosEntity> findByReferencia (String referencia);
-
-    Optional<ProductosEntity> findByMarca(String marca);
-
-    Optional<ProductosEntity> findByModelo(String modelo);
-
-    Optional<ProductosEntity> findByVersion(String version);
+//    Optional<ProductosEntity> findByProductoId (Long productoId);
+//
+//    Optional<ProductosEntity> findByDescripcion (String descripcion);
+//
+//    Optional<ProductosEntity> findByReferencia (String referencia);
+//
+//    Optional<ProductosEntity> findByMarca(String marca);
+//
+//    Optional<ProductosEntity> findByModelo(String modelo);
+//
+//    Optional<ProductosEntity> findByVersion(String version);
 
 }
